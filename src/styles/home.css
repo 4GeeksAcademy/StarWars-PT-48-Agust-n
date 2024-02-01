@@ -29,3 +29,7 @@ width: 100vw;
 .scroll-container{
 width: 100vw;
 }
+
+.title {
+    margin-right: 1rem;
+}
