@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/home.css";
-import { FaHeart } from "react-icons/fa"; // Importa el ícono del corazón
+import { FaHeart } from "react-icons/fa";
 
 export const Starships = () => {
   const [starships, setStarships] = useState([]);
@@ -46,7 +46,6 @@ export const Starships = () => {
           <div className="card-body">
             <h5 className="card-title">{starships.name}</h5>
             
-            {/* Corazón que cambia de color según el estado */}
             <FaHeart
               className={`heart-icon ${isFavorite(starships) ? "heart-icon-filled" : "heart-icon-empty"}`}
               onClick={() => (isFavorite(starships) ? removeFromFavorites(starships) : addToFavorites(starships))}
@@ -57,7 +56,6 @@ export const Starships = () => {
       </div>
       
       
-      {/* Lista de favoritos */}
       <div className="text-center mt-5">
         <h2>Favorites</h2>
         {favorites.map((fav, index) => (

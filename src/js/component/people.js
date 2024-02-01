@@ -1,13 +1,12 @@
 import React, { useEffect, useState, useContext } from "react";
 import "../../styles/home.css";
-import { Link } from "react-router-dom"; // Asegúrate de importar Link desde 'react-router-dom'
-import { FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { FaHeart } from "react-icons/fa";
 
 
 export const Characters = () => {
   const {store, actions} = useContext(Context);
-  //const [characters, setCharacters] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const openNewTab = (uid) => {
     window.open(`/CharacterDetails/${uid}`, '_blank');
@@ -16,16 +15,11 @@ export const Characters = () => {
   console.log(store)
 
   useEffect(() => {
-    //getCharacters();
     actions.getCharacters()
   }, []);
 
   const addToFavorites = (character) => {
     setFavorites([...favorites, character]);
-    //const store = getStore()
-    //setStore({
-      //favorites: [...store.favorites, character]
-    //})
   };
 
   const removeFromFavorites = (character) => {
@@ -57,7 +51,6 @@ export const Characters = () => {
               <button
                 type="button"
                 className="btn btn-warning"
-                //onClick={() => openNewTab(people.uid)}
               >
                 VER MÁS
               </button>

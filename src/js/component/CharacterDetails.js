@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const CharacterDetails = () => {
   const { uid } = useParams();
@@ -40,9 +40,9 @@ const CharacterDetails = () => {
           <p>Color de ojos: {characterDetails.eye_color}</p>
         </div>
       </div>
-      
-      
-      {/* Agrega más detalles según sea necesario */}
+      <Link to="/">
+        <button type="button" className="return__home btn btn-primary mt-3">Volver</button>
+      </Link>
     </div>
   );
 };
