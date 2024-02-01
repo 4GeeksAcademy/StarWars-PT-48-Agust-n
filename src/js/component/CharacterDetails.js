@@ -41,7 +41,7 @@ const CharacterDetails = () => {
         </div>
       </div>
       <Link to="/">
-        <button type="button" className="return__home btn btn-primary mt-3">Volver</button>
+        <button type="button" className="return__home btn btn-warning mt-3">Volver</button>
       </Link>
     </div>
   );
